@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  clip_id: 1
+  accessible: false
+  length: 1
+  game: 
+  show: 
+
+two:
+  title: MyString
+  clip_id: 1
+  accessible: false
+  length: 1
+  game: 
+  show: 

@@ -4,8 +4,15 @@ vods = VodSeeder.get_archive
 
 url = 'http://www.twitch.tv/thegdstudio/b/'
 vods.each do |vod|
-  p [url + vod['id'],vod['title'], vod['broadcast_id'], vod['length']]
-  Vod.create!(url: url + vod['id'], name: vod['title'], broadcast_id: vod['id'], length: vod['length'])
+  Vod.create!(title: vod['title'], clip_id: vod['id'], length: vod['length'])
 end
 
-Vod.first.timestamps.create!(title: "start of show", seconds: 810)
+Game.create!(name: "Starcraft 2")
+Game.create!(name: "BLC")
+Game.create!(name: "Quake")
+Game.create!(name: "Dota 2")
+
+Show.create!(name: "L2P")
+Show.create!(name: "The Arena")
+Show.create!(name: "The GD Show")
+Show.create!(name: "Special")
