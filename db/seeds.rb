@@ -1,7 +1,11 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+require_relative 'vod_seeder.rb'
+
+vods = VodSeeder.get_archive
+
+url = 'http://www.twitch.tv/thegdstudio/b/'
+vods.each do |vod|
+  p [url + vod['id'],vod['title'], vod['broadcast_id'], vod['length']]
+  Vod.create!(url: url + vod['id'], name: vod['title'], broadcast_id: vod['id'], length: vod['length'])
+end
+
+Vod.first.timestamps.create!(title: "start of show", seconds: 810)
