@@ -22,7 +22,7 @@ class VodSeeder
   private
   def self.download_vods
     jtv_client =  JtvClient.new(CONSUMER_KEY, CONSUMER_SECRET)
-    response = jtv_client.get("/channel/archives/thegdstudio.json?limit=50")
+    response = jtv_client.get("/channel/archives/thegdstudio.json?offset=0&limit=99")
 
     if response.is_a?(Net::HTTPOK)
       vod = JSON.parse(response.body)

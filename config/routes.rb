@@ -1,5 +1,9 @@
 Thegdarchive::Application.routes.draw do
+  resources :vods
+  root to: "vods#index"
+  match 'admin' => 'vods#edit'
   # The priority is based upon order of creation:
+  #
   # first created -> highest priority.
 
   # Sample of regular route:

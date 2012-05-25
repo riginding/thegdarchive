@@ -1,0 +1,13 @@
+#vod_area
+  %h1= 'Vods'
+  - @vods.each do |vod|
+    = vod.inspect
+    = link_to "Vod", "http://twitch.tv/thegdstudio/b/#{vod.clip_id}"
+    = simple_form_for(vod) do |f|
+      = f.input :title
+      = f.input :clip_id
+      = f.association :show, selected: vod.show_id
+      = f.association :game, selected: vod.game_id
+      = f.input :accessible
+      = f.button :submit
+    %br

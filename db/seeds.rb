@@ -2,7 +2,7 @@ require_relative 'vod_seeder.rb'
 
 vods = VodSeeder.get_archive
 
-url = 'http://www.twitch.tv/thegdstudio/b/'
+Vod.create!(title: "Pilot Show - March 18th @ 18:00 CET // Tune in or the bear will get you!", clip_id: 312098710, length: 7204)
 vods.each do |vod|
   Vod.create!(title: vod['title'], clip_id: vod['id'], length: vod['length'])
 end
