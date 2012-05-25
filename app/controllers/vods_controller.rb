@@ -1,10 +1,13 @@
 class VodsController < ApplicationController
   def index
     @vod = Vod.last
+    @time = params[:t]
+    @timestamp = @vod.timestamps.build
   end
   def show
     @vod = Vod.find(params[:id])
     @time = params[:t]
+    @timestamp = @vod.timestamps.build
   end
   def edit
     @vods = Vod.where(accessible: true).sort

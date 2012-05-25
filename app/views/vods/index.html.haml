@@ -1,9 +1,1 @@
-#vod_area
-  %h1= @vod.title
-  =render :partial => "vodplayer", :locals => { :vod => @vod, :time => @time }
-  #timestamp
-    -unless @vod.timestamps.empty?
-      %h3 Timestamps
-      %ul
-        -@vod.timestamps.reverse.each do |timestamp|
-          %li= link_to("#{timestamp.content} - #{(Time.mktime(0)+timestamp.timeat).strftime("%H:%M:%S")}", vod_path(@vod, t: timestamp.timeat))
+=render :partial => "show"
