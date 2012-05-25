@@ -1,4 +1,4 @@
-= simple_form_for [@vod, @timestamp] do |f|
+= simple_form_for([@vod, Timestamp.new], remote: true) do |f|
   = f.input :content
   = f.input :timeat
-  = f.button :submit
+  = f.button :submit, id: "timestamp_button"
