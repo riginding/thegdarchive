@@ -1,0 +1,15 @@
+common: &common
+  adapter: postgresql
+  username: ryan
+  password: 
+  port: 5433
+
+development:
+  <<: *common
+  database: thegdarchive_development
+
+test:
+  <<: *common
+  database: thegdarchive_test
+
+
