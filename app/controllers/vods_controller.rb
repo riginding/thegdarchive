@@ -15,4 +15,9 @@ class VodsController < ApplicationController
     @vod.update_attributes(params[:vod])
     redirect_to admin_path
   end
+  def autoplay
+    value = params[:autoplay] == "true" ? true : false
+    session[:autoplay] = value
+    render nothing: true
+  end
 end

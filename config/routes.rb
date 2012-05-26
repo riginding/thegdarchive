@@ -4,6 +4,7 @@ Thegdarchive::Application.routes.draw do
   end
   root to: "vods#index"
   match 'admin' => 'vods#edit'
+  match 'autoplay' => 'vods#autoplay'
   # The priority is based upon order of creation:
   #
   # first created -> highest priority.

@@ -1,4 +1,7 @@
 #logo
+%label
+  = check_box_tag 'autoplay', 'autoplay', session[:autoplay]
+  VOD autoplay
 #vod_filter
   =render "shared/vodfilter"
 #vod_list
