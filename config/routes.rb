@@ -2,6 +2,7 @@ Thegdarchive::Application.routes.draw do
   resources :vods do
     resources :timestamps
   end
+  resources :searches
   root to: "vods#index"
   match 'admin' => 'vods#edit'
   match 'autoplay' => 'vods#autoplay'
