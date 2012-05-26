@@ -7,7 +7,7 @@ gem 'rails', '3.2.1'
 
 gem 'pg'
 gem 'oauth'
-gem 'haml-rails', '>= 0.3.4', :group => :development
+gem 'haml-rails', '>= 0.3.4'
 gem 'simple_form'
 
 # Gems used only for assets and not required
