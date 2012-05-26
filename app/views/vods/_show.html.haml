@@ -7,7 +7,7 @@
   -unless @vod.timestamps.empty?
     %h3 Timestamps
     %ul#timestamp
-      = render @vod.timestamps.reverse
+      = render @vod.timestamps.sort! {|a,b| a.timeat <=> b.timeat}
   -else
     %h3 No available Timestamps
   #timestamp_form
