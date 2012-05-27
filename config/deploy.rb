@@ -1,4 +1,5 @@
 require "bundler/capistrano"
+require "whenever/capistrano"
 
 server "108.174.50.211", :web, :app, :db, primary: true
 
@@ -11,6 +12,7 @@ set :use_sudo, false
 set :scm, "git"
 set :repository, "git@github.com:riginding/#{application}.git"
 set :branch, "master"
+set :whenever_command, "bundle exec whenever"
 
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
