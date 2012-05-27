@@ -6,10 +6,10 @@ gem 'rails', '3.2.1'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'yaml_db'
-gem 'pg'
+gem 'pg', '0.12.2'
 gem 'oauth'
 gem 'haml'
-gem 'haml-rails', '>= 0.3.4'
+gem 'haml-rails'
 gem 'simple_form'
 
 # Gems used only for assets and not required
