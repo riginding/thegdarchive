@@ -8,6 +8,7 @@ gem 'rails', '3.2.1'
 gem 'yaml_db'
 gem 'pg'
 gem 'oauth'
+gem 'haml'
 gem 'haml-rails', '>= 0.3.4'
 gem 'simple_form'
 
