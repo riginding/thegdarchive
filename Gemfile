@@ -11,6 +11,7 @@ gem 'oauth'
 gem 'haml'
 gem 'haml-rails'
 gem 'simple_form'
+gem 'google-analytics-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
