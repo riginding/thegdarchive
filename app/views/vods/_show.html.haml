@@ -10,6 +10,7 @@
       = render @vod.timestamps.sort! {|a,b| a.timeat <=> b.timeat}
   -else
     %h3 No available Timestamps
+    %ul#timestamp
   #timestamp_form
     =render :partial => "timestamps/form"
   =link_to "Add timestamps", "#", id: "timestamp_add"
