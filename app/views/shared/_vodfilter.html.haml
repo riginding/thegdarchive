@@ -2,13 +2,12 @@
 
 = form_for Search.new do |f|
   %label 
-    =f.collection_select(:game_id, Game.order(:name), :id, :name, {include_blank: 'No Game Filter'}, {class: "styled-select"})
+    =f.collection_select(:game_id, Game.order(:name), :id, :name, @search.nil? ? {include_blank: 'No Game Filter' } : {include_blank: 'No Game Filter', selected: @search.game_id}, {class: "styled-select"})
     Game
   %label 
-    =f.collection_select(:show_id, Show.order(:name), :id, :name, {include_blank: 'No Show Filter'}, {class: "styled-select"})
+    =f.collection_select(:show_id, Show.order(:name), :id, :name, @search.nil? ? {include_blank: 'No Show Filter'} : {include_blank: 'No Show Filter', selected: @search.show_id}, {class: "styled-select"})
     Show
   %label 
-    =f.text_field :keywords, class: "searchbox"
+    =f.text_field :keywords, class: "searchbox", value: @search.nil? ? "" : @search.keywords
     Search
   =f.submit "Search", class: "button"
-
