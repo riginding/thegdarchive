@@ -4,7 +4,7 @@ Thegdarchive::Application.routes.draw do
   end
   resources :searches
   root to: "vods#index"
-  #match 'admin' => 'vods#edit'
+  match 'admin' => 'vods#edit'
   match 'autoplay' => 'vods#autoplay'
   # The priority is based upon order of creation:
   #
