@@ -6,6 +6,7 @@ class VodsController < ApplicationController
   def show
     @vod = Vod.find(params[:id])
     @time = params[:t]
+    session[:autoplay] = true if @time
   end
   def edit
     @vods = Vod.where(accessible: true).sort
