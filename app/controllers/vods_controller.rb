@@ -1,6 +1,6 @@
 class VodsController < ApplicationController
   def index
-    @vod = Vod.last
+    @vod = Vod.where(accessible: true).last
     @time = params[:t]
   end
   def show
