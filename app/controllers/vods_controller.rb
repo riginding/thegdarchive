@@ -9,7 +9,7 @@ class VodsController < ApplicationController
     session[:autoplay] = true if @time
   end
   def edit
-    @vods = Vod.all.sort
+    @vods = Vod.paginate(:page => params[:page], per_page: 20).order('id DESC')
   end
   def update
     @vod = Vod.find(params[:id])

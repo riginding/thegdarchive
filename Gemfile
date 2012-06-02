@@ -13,6 +13,7 @@ gem 'haml-rails'
 gem 'simple_form'
 gem 'google-analytics-rails'
 gem 'whenever', :require => false
+gem 'will_paginate'
 
 # Gems used only for assets and not required
 # in production environments by default.

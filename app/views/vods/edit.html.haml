@@ -1,5 +1,6 @@
 #vod_area
   %h1= 'Vods'
+  %p= will_paginate @vods
   - @vods.each do |vod|
     = vod.inspect
     = link_to "Vod", "http://twitch.tv/thegdstudio/b/#{vod.clip_id}"
