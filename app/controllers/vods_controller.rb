@@ -9,7 +9,7 @@ class VodsController < ApplicationController
     session[:autoplay] = true if @time
   end
   def edit
-    @vods = Vod.where(accessible: true).sort
+    @vods = Vod.all.sort
   end
   def update
     @vod = Vod.find(params[:id])
