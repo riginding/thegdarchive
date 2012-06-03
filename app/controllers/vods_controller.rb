@@ -6,10 +6,10 @@ before_filter :authenticate_admin!, only: [:edit]
     @time = params[:t]
   end
   def show
-    @vod = Vod.accessible.where(params[:id])
+    @vod = Vod.accessible.find(params[:id])
     @time = params[:t]
+    redirect_to root_path unless @vod
     session[:autoplay] = true if @time
-    redirect_to root_path if @vod
   end
   def edit
     @vods = Vod.paginate(:page => params[:page], per_page: 20).order('id DESC')
