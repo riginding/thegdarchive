@@ -6,7 +6,7 @@ before_filter :authenticate_admin!, only: [:edit]
     @time = params[:t]
   end
   def show
-    @vod = Vod.accessible.find(params[:id])
+    @vod = Vod.accessible.find_by_id(params[:id])
     @time = params[:t]
     redirect_to root_path unless @vod
     session[:autoplay] = true if @time
