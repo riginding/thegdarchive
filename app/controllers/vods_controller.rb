@@ -1,4 +1,6 @@
 class VodsController < ApplicationController
+before_filter :authenticate_admin!, only: [:edit]
+
   def index
     @vod = Vod.where(accessible: true).last
     @time = params[:t]

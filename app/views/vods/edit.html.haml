@@ -1,5 +1,6 @@
 #vod_area
   %h1= 'Vods'
+  =link_to 'Sign out', destroy_admin_session_path, method: :delete
   %p= will_paginate @vods
   - @vods.each do |vod|
     = vod.inspect

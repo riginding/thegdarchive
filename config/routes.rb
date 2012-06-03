@@ -1,4 +1,5 @@
 Thegdarchive::Application.routes.draw do
+  devise_for :admins
   resources :vods, except: [:edit] do
     resources :timestamps
   end
