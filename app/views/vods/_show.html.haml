@@ -1,6 +1,5 @@
 #vod_area
   %h1= @vod.title
-  = @vod.views
   -if session[:autoplay]
     =render :partial => "vodplayerlive", :locals => { :vod => @vod, :time => @time }
   -else
