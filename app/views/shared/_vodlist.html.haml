@@ -2,7 +2,7 @@
 %ul#vods
   -latest_vods.each do |vod|
     %li= link_to vod.title, vod
-%h2.header_vod Most watched Vods
+%h2.header_vod Most Watched Vods
 %ul#vods
   -Vod.most_watched.each do |vod|
     %li= link_to vod.title, vod
