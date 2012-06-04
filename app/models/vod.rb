@@ -1,5 +1,5 @@
 class Vod < ActiveRecord::Base
-  has_many :timestamps
+  has_many :timestamps, dependent: :destroy
   belongs_to :game
   belongs_to :show
 
