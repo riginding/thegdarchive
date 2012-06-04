@@ -61,7 +61,11 @@ GEM
       railties (~> 3.0)
     highline (1.6.12)
     hike (1.2.1)
+    httpclient (2.2.5)
     i18n (0.6.0)
+    impressionist (1.1.1)
+      httpclient (~> 2.2)
+      nokogiri (~> 1.5)
     journey (1.0.3)
     jquery-rails (2.0.2)
       railties (>= 3.2.0, < 5.0)
@@ -81,6 +85,7 @@ GEM
     net-ssh (2.5.2)
     net-ssh-gateway (1.1.0)
       net-ssh (>= 1.99.1)
+    nokogiri (1.5.3)
     oauth (0.4.6)
     orm_adapter (0.0.5)
     pg (0.12.2)
@@ -154,6 +159,7 @@ DEPENDENCIES
   google-analytics-rails
   haml
   haml-rails
+  impressionist
   jquery-rails
   oauth
   pg (= 0.12.2)

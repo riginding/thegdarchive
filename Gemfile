@@ -15,6 +15,7 @@ gem 'google-analytics-rails'
 gem 'whenever', :require => false
 gem 'will_paginate'
 gem 'devise'
+gem 'impressionist'
 
 # Gems used only for assets and not required
 # in production environments by default.

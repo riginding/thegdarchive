@@ -1,5 +1,7 @@
 class VodsController < ApplicationController
-before_filter :authenticate_admin!, only: [:edit]
+  before_filter :authenticate_admin!, only: [:edit]
+
+  impressionist actions: [:show]
 
   def index
     @vod = Vod.last
