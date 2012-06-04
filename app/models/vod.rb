@@ -3,6 +3,6 @@ class Vod < ActiveRecord::Base
   belongs_to :game
   belongs_to :show
 
-  scope :accessible, where(accessible: true)
- # validates :clip_id, uniqueness: true
+  default_scope where(accessible: true)
+  #validates :clip_id, uniqueness: true
 end
