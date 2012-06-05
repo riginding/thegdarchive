@@ -1,5 +1,5 @@
 require 'json'
-require_relative 'jtv_client'
+require_relative '../lib/twitch/jtv_client'
 
 class VodSeeder
 

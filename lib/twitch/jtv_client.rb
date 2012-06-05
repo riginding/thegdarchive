@@ -33,7 +33,7 @@ class JtvClient
   # Parameters
   # consumer_key is a string of your API key
   # consumer_secret is a string of your API secret
-  def initialize(consumer_key, consumer_secret)
+  def initialize(consumer_key='WK0xHGZHEyxuzvZ9Kbr0MQ' , consumer_secret='LvJbOzQjUujisxMItZT1WFcbpQaKjwkhsGpdmzXQ')
     @consumer = OAuth::Consumer.new(
       consumer_key,
       consumer_secret,
