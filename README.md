@@ -1,5 +1,5 @@
 ## The GD Studio VOD Archive
-The GD Studio VOD Archive is a Ruby on Rails 3.1 application which runs on Ruby 1.9.2 and
+The GD Studio VOD Archive is a Ruby on Rails 3.2 application which runs on Ruby 1.9.2 and
 [PostgreSQL](http://www.postgresql.org) databases.
 
 ### Setting Up For Development 
