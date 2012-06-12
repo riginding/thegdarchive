@@ -7,5 +7,4 @@ class Vod < ActiveRecord::Base
 
   default_scope where(accessible: true)
   scope :most_watched, lambda { where("views is not null").order("views DESC").first(3) }
-  #validates :clip_id, uniqueness: true
 end

@@ -3,7 +3,7 @@ require_relative '../../db/vod_seeder.rb'
 namespace :vod do
   desc "updates Vod from TwitchTV"
   task :update => :environment do
-    last = Vod.last.clip_id
+    last = Vod.unscoped.last.clip_id
     twitch_vods = VodSeeder.get_archive    
     index = twitch_vods.index {|v| v['id'].to_i == last}
     vods = twitch_vods[index..-1]
